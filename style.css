@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main";
+}
+
+/* SIDE BAR STYLING */
+.sidebar{
+    grid-area: sidebar;
+    background-color: #0d5c55;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.menu-title{
+    font-size: 3rem;
+    letter-spacing: -0.19em;
+    /* color: #0d9488; */
+    color: #15e0cf;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 5px 4px 1px #0d9488;
+}
+
+.menu-item{
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 10px;
+    border-left: 8px solid transparent;
+}
+
+.menu-item:hover, .menu-item .active{
+    background-color: #0d9488;
+    color: white;
+    border-left: 8px solid #15e0cf;
+}
+
+.logout{
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #0d9488;
+    text-align: center;
+}
+
+/* HEADER STYLING */
+.header{
+    grid-area: header;
+    background-color: white;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo{
+    font-weight: bold;
+    letter-spacing: -0.19em;
+    font-size: 2.5rem;
+    color: #138379;
+    text-shadow: 4px 2px 0px #0eccbc;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile img{
+    border-radius: 50%;
+    width: 40px;
+}
+.main{
+    grid-area: main;
+    padding: 30px;
+    display: grid;
+    gap: 30px;
+    overflow-y: auto;
+}
+
+.main::-webkit-scrollbar{
+    width: 0;
+}
+
+/* CARDS STYLING */
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+}
+
+/* CONTENT STYLING */
