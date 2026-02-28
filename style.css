@@ -30,10 +30,14 @@ body{
     flex-direction: column;
 }
 
+.sidebar a{
+    text-decoration: none;
+    color: white;
+}
+
 .menu-title{
     font-size: 3rem;
     letter-spacing: -0.19em;
-    /* color: #0d9488; */
     color: #15e0cf;
     margin-bottom: 20px;
     font-weight: bold;
@@ -47,6 +51,17 @@ body{
     transition: 0.3s;
     margin-bottom: 10px;
     border-left: 8px solid transparent;
+}
+
+.menu-item a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-item:hover, .active{
+    background-color: #0d9488;
+    color: white;
+    border-left: 8px solid #15e0cf;
 }
 
 .menu-item:hover, .menu-item .active{
@@ -65,12 +80,13 @@ body{
 /* HEADER STYLING */
 .header{
     grid-area: header;
-    background-color: white;
+    background: linear-gradient(135deg, #cde6e3 20%, #0eccbc 100%);
     border-bottom: 1px solid #e2e8f0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+    border-bottom: 1px solid #9fe0db;
 }
 
 .logo{
@@ -79,6 +95,7 @@ body{
     font-size: 2.5rem;
     color: #138379;
     text-shadow: 4px 2px 0px #0eccbc;
+
 }
 
 .profile{
@@ -106,7 +123,70 @@ body{
 /* CARDS STYLING */
 .cards{
     display: grid;
-    grid-template-columns: repeat(4, 2fr);
+    grid-template-columns: repeat(2, 2fr);
+    gap: 25px;
+}
+
+.card{
+    background-color: white;
+    border-radius: 16px;
+    padding: 25px;
+    transition-property: box-shadow, transform, border;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    border: 1px solid transparent;
+    height: 150px;
+}
+
+.card:hover{
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+    border: 1px solid #15e0cf;
+    cursor: pointer;
+}
+
+.card-growth-negative{
+    color: red;
+}
+
+.card-title{
+    font-size: 18px;
+    color: #0d5c55;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-value{
+    font-size: 22px;
+    color: #138379;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-growth{
+    font-size: 20px;
+    color: #0d9488;
 }
 
 /* CONTENT STYLING */
+.content{
+    background-color: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-top: 10px;
+}
+
+.content-title{
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #0d5c55;
+    font-size: 30px;
+}
+
+.activity{
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    color: #003530;
+    border-bottom: 1px solid #a8d1ce;
+}
